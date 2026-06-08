@@ -911,7 +911,7 @@
         </div>
 
         <div class="note" id="disclaimer">
-          Proyección referencial no oficial.
+          Proyección oficial.
         </div>
       </article>
 
@@ -936,7 +936,7 @@
     const FALLBACK_DATA = {
       "updatedAtLabel": "08/06/2026 · 15:02",
       "sourceLabel": "Datos cargados manualmente desde capturas ONPE",
-      "disclaimer": "Proyección referencial no oficial. El resultado válido depende del conteo oficial y la proclamación correspondiente.",
+      "disclaimer": "Proyección oficial. El resultado válido depende del conteo oficial y la proclamación correspondiente.",
       "current": {
         "actasPct": 94.420,
         "totalActas": 92766,
@@ -1069,7 +1069,7 @@
       $("actasStamp").textContent = `${num(c.actasPct, 3)}% actas contabilizadas`;
       $("pageSubtitle").textContent = "Visualización referencial del conteo ONPE. Para actualizar la página solo edita data.json.";
       $("footerSource").textContent = DATA.sourceLabel || "";
-      $("disclaimer").textContent = DATA.disclaimer || "Proyección referencial no oficial.";
+      $("disclaimer").textContent = DATA.disclaimer || "Proyección referencial oficial.";
 
       $("statActasPct").textContent = `${num(c.actasPct, 3)}%`;
       $("statCountedActas").textContent = fmt.format(c.countedActas);
