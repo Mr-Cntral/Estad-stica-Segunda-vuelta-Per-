@@ -1,24 +1,23 @@
 {
-  "updatedAtLabel": "08/06/2026 · 15:02",
+  "updatedAtLabel": "08/06/2026 · 15:48",
   "sourceLabel": "Datos cargados manualmente desde capturas ONPE",
   "disclaimer": "Proyección referencial no oficial. El resultado válido depende del conteo oficial y la proclamación correspondiente.",
   "current": {
-    "actasPct": 94.42,
+    "actasPct": 94.599,
     "totalActas": 92766,
-    "countedActas": 87590,
-    "pendingActas": 3660,
-    "validVotes": 17640802
+    "countedActas": 87756,
+    "pendingActas": 3489,
+    "validVotes": 17661526
   },
   "candidates": {
     "roberto": {
       "shortName": "Roberto Sánchez",
       "fullName": "Roberto Helbert Sánchez Palomino",
       "party": "Juntos por el Perú",
-      "votes": 8828268,
-      "percent": 50.045,
+      "votes": 8842257,
+      "percent": 50.065,
       "color": "#119063",
       "logoPaths": [
-        "Logo del partido Juntos por el Peru.png",
         "Logo del partido Juntos por el Peru.png"
       ],
       "photoLight": "RobertoSanchez.png",
@@ -28,8 +27,8 @@
       "shortName": "Keiko Fujimori",
       "fullName": "Keiko Sofía Fujimori Higuchi",
       "party": "Fuerza Popular",
-      "votes": 8812534,
-      "percent": 49.955,
+      "votes": 8819269,
+      "percent": 49.935,
       "color": "#f97316",
       "logoPaths": [
         "Logo del partido Fuerza Popular.svg"
@@ -40,12 +39,12 @@
   },
   "foreign": {
     "totalActas": 2543,
-    "countedActas": 91,
-    "pendingActas": 2449,
-    "keikoVotes": 9532,
-    "robertoVotes": 7434,
-    "keikoPercent": 56.183,
-    "robertoPercent": 43.817
+    "countedActas": 92,
+    "pendingActas": 2447,
+    "keikoVotes": 9638,
+    "robertoVotes": 7497,
+    "keikoPercent": 56.247,
+    "robertoPercent": 43.753
   },
   "scenarioDefaults": {
     "foreignKeikoPercent": 56.2,
@@ -88,7 +87,7 @@
       "roberto": 49.994
     },
     {
-      "actas": 93.92,
+      "actas": 93.920,
       "keiko": 49.992,
       "roberto": 50.008
     },
@@ -98,9 +97,14 @@
       "roberto": 50.044
     },
     {
-      "actas": 94.42,
+      "actas": 94.420,
       "keiko": 49.955,
       "roberto": 50.045
+    },
+    {
+      "actas": 94.599,
+      "keiko": 49.935,
+      "roberto": 50.065
     }
   ]
 }
