@@ -1489,9 +1489,3 @@
   </script>
 </body>
 </html>
-'''
-
-path = Path("/mnt/data/index_dashboard_peru_2026.html")
-path.write_text(html, encoding="utf-8")
-print(f"Archivo generado: {path}")
-print(f"Tamaño: {path.stat().st_size:,} bytes")
