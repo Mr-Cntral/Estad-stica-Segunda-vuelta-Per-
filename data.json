@@ -1,21 +1,21 @@
 {
-  "updatedAtLabel": "08/06/2026 · 19:58",
+  "updatedAtLabel": "08/06/2026 · 21:08",
   "sourceLabel": "Datos cargados manualmente desde capturas ONPE",
   "disclaimer": "Proyección referencial no oficial. El resultado válido depende del conteo oficial y la proclamación correspondiente.",
   "current": {
-    "actasPct": 95.041,
+    "actasPct": 95.142,
     "totalActas": 92766,
-    "countedActas": 88166,
-    "pendingActas": 3081,
-    "validVotes": 17707316
+    "countedActas": 88259,
+    "pendingActas": 2992,
+    "validVotes": 17719137
   },
   "candidates": {
     "roberto": {
       "shortName": "Roberto Sánchez",
       "fullName": "Roberto Helbert Sánchez Palomino",
       "party": "Juntos por el Perú",
-      "votes": 8874568,
-      "percent": 50.118,
+      "votes": 8880924,
+      "percent": 50.121,
       "color": "#119063",
       "logoPaths": [
         "Logo del partido Juntos por el Peru.png"
@@ -27,8 +27,8 @@
       "shortName": "Keiko Fujimori",
       "fullName": "Keiko Sofía Fujimori Higuchi",
       "party": "Fuerza Popular",
-      "votes": 8832748,
-      "percent": 49.882,
+      "votes": 8838213,
+      "percent": 49.879,
       "color": "#f97316",
       "logoPaths": [
         "Logo del partido Fuerza Popular.svg"
@@ -39,77 +39,30 @@
   },
   "foreign": {
     "totalActas": 2543,
-    "countedActas": 187,
-    "pendingActas": 2344,
-    "keikoVotes": 14039,
-    "robertoVotes": 11386,
-    "keikoPercent": 55.217,
-    "robertoPercent": 44.783
+    "countedActas": 198,
+    "pendingActas": 2333,
+    "keikoVotes": 14871,
+    "robertoVotes": 11842,
+    "keikoPercent": 55.67,
+    "robertoPercent": 44.33
   },
   "scenarioDefaults": {
-    "foreignKeikoPercent": 55.2,
+    "foreignKeikoPercent": 55.7,
     "internalRobertoPercent": 58.0
   },
   "timeline": [
-    {
-      "actas": 84.459,
-      "keiko": 51.253,
-      "roberto": 48.747
-    },
-    {
-      "actas": 85.148,
-      "keiko": 51.179,
-      "roberto": 48.821
-    },
-    {
-      "actas": 85.484,
-      "keiko": 51.121,
-      "roberto": 48.879
-    },
-    {
-      "actas": 93.155,
-      "keiko": 50.073,
-      "roberto": 49.927
-    },
-    {
-      "actas": 93.268,
-      "keiko": 50.058,
-      "roberto": 49.942
-    },
-    {
-      "actas": 93.407,
-      "keiko": 50.043,
-      "roberto": 49.957
-    },
-    {
-      "actas": 93.794,
-      "keiko": 50.006,
-      "roberto": 49.994
-    },
-    {
-      "actas": 93.920,
-      "keiko": 49.992,
-      "roberto": 50.008
-    },
-    {
-      "actas": 94.208,
-      "keiko": 49.956,
-      "roberto": 50.044
-    },
-    {
-      "actas": 94.420,
-      "keiko": 49.955,
-      "roberto": 50.045
-    },
-    {
-      "actas": 94.599,
-      "keiko": 49.935,
-      "roberto": 50.065
-    },
-    {
-      "actas": 95.041,
-      "keiko": 49.882,
-      "roberto": 50.118
-    }
+    { "actas": 84.459, "keiko": 51.253, "roberto": 48.747 },
+    { "actas": 85.148, "keiko": 51.179, "roberto": 48.821 },
+    { "actas": 85.484, "keiko": 51.121, "roberto": 48.879 },
+    { "actas": 93.155, "keiko": 50.073, "roberto": 49.927 },
+    { "actas": 93.268, "keiko": 50.058, "roberto": 49.942 },
+    { "actas": 93.407, "keiko": 50.043, "roberto": 49.957 },
+    { "actas": 93.794, "keiko": 50.006, "roberto": 49.994 },
+    { "actas": 93.920, "keiko": 49.992, "roberto": 50.008 },
+    { "actas": 94.208, "keiko": 49.956, "roberto": 50.044 },
+    { "actas": 94.420, "keiko": 49.955, "roberto": 50.045 },
+    { "actas": 94.599, "keiko": 49.935, "roberto": 50.065 },
+    { "actas": 95.041, "keiko": 49.882, "roberto": 50.118 },
+    { "actas": 95.142, "keiko": 49.879, "roberto": 50.121 }
   ]
 }
