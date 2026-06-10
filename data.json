@@ -1,21 +1,21 @@
 {
-  "updatedAtLabel": "10/06/2026 · 12:42",
+  "updatedAtLabel": "10/06/2026 · 18:35",
   "sourceLabel": "Datos cargados manualmente desde capturas ONPE",
   "disclaimer": "Proyección referencial no oficial. El resultado válido depende del conteo oficial y la proclamación correspondiente.",
   "current": {
-    "actasPct": 97.824,
+    "actasPct": 97.916,
     "totalActas": 92766,
-    "countedActas": 90747,
-    "pendingActas": 406,
-    "validVotes": 18019583
+    "countedActas": 90833,
+    "pendingActas": 318,
+    "validVotes": 18027396
   },
   "candidates": {
     "roberto": {
       "shortName": "Roberto Sánchez",
       "fullName": "Roberto Helbert Sánchez Palomino",
       "party": "Juntos por el Perú",
-      "votes": 9012677,
-      "percent": 50.016,
+      "votes": 9018592,
+      "percent": 50.027,
       "color": "#119063",
       "logoPaths": ["Logo del partido Juntos por el Peru.png"],
       "photoLight": "RobertoSanchez.png",
@@ -25,8 +25,8 @@
       "shortName": "Keiko Fujimori",
       "fullName": "Keiko Sofía Fujimori Higuchi",
       "party": "Fuerza Popular",
-      "votes": 9006906,
-      "percent": 49.984,
+      "votes": 9008804,
+      "percent": 49.973,
       "color": "#f97316",
       "logoPaths": ["Logo del partido Fuerza Popular.svg"],
       "photoLight": "KeykoFujimori.png",
@@ -65,6 +65,7 @@
     { "actas": 96.024, "keiko": 49.943, "roberto": 50.057 },
     { "actas": 96.335, "keiko": 49.879, "roberto": 50.121 },
     { "actas": 96.88, "keiko": 49.913, "roberto": 50.087 },
-    { "actas": 97.824, "keiko": 49.984, "roberto": 50.016 }
+    { "actas": 97.824, "keiko": 49.984, "roberto": 50.016 },
+    { "actas": 97.916, "keiko": 49.973, "roberto": 50.027 }
   ]
 }
