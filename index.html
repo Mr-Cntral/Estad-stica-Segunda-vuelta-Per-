@@ -499,6 +499,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      position: relative; /* Para el tooltip */
     }
 
     body[data-theme="dark"] .chart-shell {
@@ -509,6 +510,40 @@
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    /* Estilos del Tooltip interactivo */
+    .chart-tooltip {
+      position: absolute;
+      background: var(--ink);
+      color: var(--bg);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.1s ease;
+      z-index: 100;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+      white-space: nowrap;
+      line-height: 1.4;
+      transform: translate(-50%, -100%);
+      margin-top: -15px;
+    }
+    
+    .chart-tooltip span {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    body[data-theme="dark"] .chart-tooltip {
+      background: #f8fafc;
+      color: #0f172a;
     }
 
     .mobile-chart {
@@ -568,6 +603,12 @@
       font-weight: 600;
     }
 
+    .controls-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
     .controls {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -598,6 +639,30 @@
     input[type="range"] {
       width: 100%;
       accent-color: var(--blue);
+    }
+
+    .controls-legend {
+      background: var(--soft-blue);
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-size: 12.5px;
+      color: var(--ink);
+      line-height: 1.5;
+      border: 1px solid var(--line);
+    }
+    
+    body[data-theme="dark"] .controls-legend {
+      background: rgba(30, 64, 175, 0.15);
+    }
+
+    .controls-legend strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+    }
+    
+    body[data-theme="dark"] .controls-legend strong {
+      color: #93c5fd;
     }
 
     .bottom-grid {
@@ -670,28 +735,18 @@
       letter-spacing: -0.042em;
     }
 
-    .note {
-      margin-top: 16px;
-      padding: 15px 16px;
-      border-radius: 16px;
-      border-left: 4px solid var(--fp);
-      background: #fff7ed;
-      color: #7c2d12;
-      line-height: 1.55;
-      font-size: 14px;
-    }
-
-    body[data-theme="dark"] .note {
-      background: rgba(124,45,18,0.22);
-      color: #fed7aa;
-    }
-
     .footer {
-      margin-top: 22px;
+      margin-top: 32px;
       text-align: center;
       color: var(--muted);
-      font-size: 12px;
-      line-height: 1.55;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer strong {
+      color: var(--ink);
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
     .data-error {
@@ -780,11 +835,10 @@
       .winner-panel { grid-template-columns: 1fr; }
     }
 
-    /* Mejora drástica para Mobile / iPhone */
     @media (max-width: 640px) {
       .page {
         width: 100%;
-        padding: 12px 10px 24px; /* Ajuste para maximizar ancho de pantalla */
+        padding: 12px 10px 24px; 
       }
 
       h1 { font-size: 32px; }
@@ -795,7 +849,6 @@
         text-align: center;
       }
 
-      /* Forza a una columna todos los grids de stats */
       .stats-strip, .candidate-votes, .result-grid, .controls {
         grid-template-columns: 1fr;
       }
@@ -830,7 +883,6 @@
       .center-head h2 { font-size: 24px; }
       .winner-panel strong { font-size: 26px; }
 
-      /* Cambia a vista de gráfico móvil (Barras de progreso) */
       .desktop-chart {
         display: none !important;
       }
@@ -951,6 +1003,8 @@
         </div>
 
         <div class="chart-shell">
+          <div id="chartTooltip" class="chart-tooltip"></div>
+          
           <svg id="mainChart" class="desktop-chart" viewBox="0 0 980 450" role="img" aria-label="Gráfico de tendencia"></svg>
           
           <div id="mobileChart" class="mobile-chart">
@@ -980,15 +1034,22 @@
           </div>
         </div>
 
-        <div class="controls">
-          <div class="control">
-            <div class="control-row"><span>Keiko en extranjero restante</span><strong id="foreignKLabel">—</strong></div>
-            <input id="foreignK" type="range" min="50" max="90" step="0.1" value="56.2" />
-          </div>
+        <div class="controls-wrapper">
+          <div class="controls">
+            <div class="control">
+              <div class="control-row"><span>Keiko en extranjero restante</span><strong id="foreignKLabel">—</strong></div>
+              <input id="foreignK" type="range" min="50" max="90" step="0.1" value="56.2" />
+            </div>
 
-          <div class="control">
-            <div class="control-row"><span>Roberto en Perú pendiente</span><strong id="internalRLabel">—</strong></div>
-            <input id="internalR" type="range" min="45" max="75" step="0.1" value="58.0" />
+            <div class="control">
+              <div class="control-row"><span>Roberto en Perú pendiente</span><strong id="internalRLabel">—</strong></div>
+              <input id="internalR" type="range" min="45" max="75" step="0.1" value="58.0" />
+            </div>
+          </div>
+          
+          <div class="controls-legend">
+            <strong>¿Por qué están separados?</strong>
+            Estos controles son independientes porque miden dos poblaciones distintas. El primer control simula <em>exclusivamente los votos que faltan llegar del exterior</em>, y el segundo control aplica <em>sólo para los votos nacionales dentro del país</em>. Mueve ambos para ver cómo cambia el resultado final de la simulación.
           </div>
         </div>
       </section>
@@ -1041,23 +1102,17 @@
           <div class="result-small"><span>Diferencia proyectada</span><strong id="projDiff">—</strong></div>
           <div class="result-small"><span>Punto de quiebre</span><strong id="breakEven">—</strong></div>
         </div>
-
-        <div class="note" id="disclaimer">
-          Proyección oficial.
-        </div>
       </article>
     </section>
 
     <div class="footer" id="footerSource">
-      —
-    </div>
+      </div>
   </main>
 
   <script>
     const FALLBACK_DATA = {
       "updatedAtLabel": "08/06/2026 · 15:02",
       "sourceLabel": "Datos cargados manualmente desde capturas ONPE",
-      "disclaimer": "Proyección oficial. El resultado válido depende del conteo oficial y la proclamación correspondiente.",
       "current": {
         "actasPct": 94.420,
         "totalActas": 92766,
@@ -1191,8 +1246,9 @@
 
       $("updatedAtLabel").textContent = DATA.updatedAtLabel || "—";
       $("actasStamp").textContent = `${num(c.actasPct, 3)}% actas contabilizadas`;
-      $("footerSource").textContent = DATA.sourceLabel || "";
-      $("disclaimer").textContent = DATA.disclaimer || "Proyección referencial oficial.";
+      
+      // Integración de la firma en el footer sin el mensaje previo
+      $("footerSource").innerHTML = (DATA.sourceLabel ? DATA.sourceLabel + "<br><br>" : "") + "<strong>Desarrollado por MrCntral By Daberoma</strong>";
 
       $("statActasPct").textContent = `${num(c.actasPct, 3)}%`;
       $("statCountedActas").textContent = fmt.format(c.countedActas);
@@ -1355,9 +1411,33 @@
       const axisX = svgEl("text", { x: W / 2, y: H - 16, "font-size": 13, fill: textColor, "text-anchor": "middle", "font-weight": 800 }, svg);
       axisX.textContent = "% de actas contabilizadas";
 
-      const robertoPts = DATA.timeline.map(d => ({ actas: d.actas, value: d.roberto }));
-      const keikoPts = DATA.timeline.map(d => ({ actas: d.actas, value: d.keiko }));
+      const robertoPts = DATA.timeline.map(d => ({ actas: d.actas, value: d.roberto, name: "Roberto" }));
+      const keikoPts = DATA.timeline.map(d => ({ actas: d.actas, value: d.keiko, name: "Keiko" }));
       const last = DATA.timeline[DATA.timeline.length - 1];
+
+      // Lógica de Tooltips Interactivos
+      const attachTooltip = (el, pt) => {
+        el.style.cursor = "pointer";
+        el.addEventListener("mouseover", (e) => {
+          const tt = $("chartTooltip");
+          tt.innerHTML = `<span>Corte de Actas: ${pt.actas.toFixed(3)}%</span>${pt.name}: ${pt.value.toFixed(3)}%`;
+          tt.style.opacity = "1";
+        });
+        el.addEventListener("mousemove", (e) => {
+          const tt = $("chartTooltip");
+          const rect = $("mainChart").getBoundingClientRect();
+          const shellRect = document.querySelector('.chart-shell').getBoundingClientRect();
+          // Calcula la posición relativa al contenedor
+          const left = e.clientX - shellRect.left;
+          const top = e.clientY - shellRect.top;
+          tt.style.left = left + "px";
+          tt.style.top = top + "px";
+          tt.style.transform = "translate(-50%, -100%)";
+        });
+        el.addEventListener("mouseout", () => {
+          $("chartTooltip").style.opacity = "0";
+        });
+      };
 
       const makeSeries = (pts, stroke) => {
         const d = smoothPathD(pts);
@@ -1384,6 +1464,8 @@
             class: idx === pts.length - 1 ? "series-dot pulse" : "series-dot"
           }, svg);
           c.style.filter = "drop-shadow(0 10px 16px rgba(15,23,42,.16))";
+          
+          attachTooltip(c, pt);
         });
       };
 
@@ -1453,6 +1535,9 @@
 
       endR.style.filter = "drop-shadow(0 12px 18px rgba(15,23,42,.18))";
       endK.style.filter = "drop-shadow(0 12px 18px rgba(15,23,42,.18))";
+      
+      attachTooltip(endR, { actas: 100, value: projectedRobertoPct, name: "Proyección Roberto" });
+      attachTooltip(endK, { actas: 100, value: projectedKeikoPct, name: "Proyección Keiko" });
 
       const currentX = x(last.actas);
       svgEl("line", { x1: currentX, y1: T, x2: currentX, y2: H - B, stroke: "#2563eb", "stroke-width": 1.8 }, svg);
