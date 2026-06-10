@@ -1,23 +1,25 @@
 {
-  "updatedAtLabel": "09/06/2026 · 15:28",
+  "updatedAtLabel": "10/06/2026 · 01:08",
   "sourceLabel": "Datos cargados manualmente desde capturas ONPE",
   "disclaimer": "Proyección referencial no oficial. El resultado válido depende del conteo oficial y la proclamación correspondiente.",
   "current": {
-    "actasPct": 96.024,
+    "actasPct": 96.88,
     "totalActas": 92766,
-    "countedActas": 89078,
-    "pendingActas": 2140,
-    "validVotes": 17807780
+    "countedActas": 89872,
+    "pendingActas": 1317,
+    "validVotes": 17920273
   },
   "candidates": {
     "roberto": {
       "shortName": "Roberto Sánchez",
       "fullName": "Roberto Helbert Sánchez Palomino",
       "party": "Juntos por el Perú",
-      "votes": 8914029,
-      "percent": 50.057,
+      "votes": 8975783,
+      "percent": 50.087,
       "color": "#119063",
-      "logoPaths": ["Logo del partido Juntos por el Peru.png"],
+      "logoPaths": [
+        "Logo del partido Juntos por el Peru.png"
+      ],
       "photoLight": "RobertoSanchez.png",
       "photoDark": "RobertoSanchez version oscuro.png"
     },
@@ -25,26 +27,28 @@
       "shortName": "Keiko Fujimori",
       "fullName": "Keiko Sofía Fujimori Higuchi",
       "party": "Fuerza Popular",
-      "votes": 8893751,
-      "percent": 49.943,
+      "votes": 8944490,
+      "percent": 49.913,
       "color": "#f97316",
-      "logoPaths": ["Logo del partido Fuerza Popular.svg"],
+      "logoPaths": [
+        "Logo del partido Fuerza Popular.svg"
+      ],
       "photoLight": "KeykoFujimori.png",
       "photoDark": "KeykoFujimori version oscuro.png"
     }
   },
   "foreign": {
     "totalActas": 2543,
-    "countedActas": 799,
-    "pendingActas": 1695,
-    "keikoVotes": 59981,
-    "robertoVotes": 32248,
-    "keikoPercent": 65.035,
-    "robertoPercent": 34.965
+    "countedActas": 1284,
+    "pendingActas": 1177,
+    "keikoVotes": 98893,
+    "robertoVotes": 59271,
+    "keikoPercent": 62.526,
+    "robertoPercent": 37.474
   },
   "scenarioDefaults": {
-    "foreignKeikoPercent": 65.0,
-    "internalRobertoPercent": 58.0
+    "foreignKeikoPercent": 62.5,
+    "internalRobertoPercent": 50.2
   },
   "timeline": [
     { "actas": 84.459, "keiko": 51.253, "roberto": 48.747 },
@@ -54,14 +58,16 @@
     { "actas": 93.268, "keiko": 50.058, "roberto": 49.942 },
     { "actas": 93.407, "keiko": 50.043, "roberto": 49.957 },
     { "actas": 93.794, "keiko": 50.006, "roberto": 49.994 },
-    { "actas": 93.920, "keiko": 49.992, "roberto": 50.008 },
+    { "actas": 93.92,  "keiko": 49.992, "roberto": 50.008 },
     { "actas": 94.208, "keiko": 49.956, "roberto": 50.044 },
-    { "actas": 94.420, "keiko": 49.955, "roberto": 50.045 },
+    { "actas": 94.42,  "keiko": 49.955, "roberto": 50.045 },
     { "actas": 94.599, "keiko": 49.935, "roberto": 50.065 },
     { "actas": 95.041, "keiko": 49.882, "roberto": 50.118 },
     { "actas": 95.142, "keiko": 49.879, "roberto": 50.121 },
     { "actas": 95.195, "keiko": 49.885, "roberto": 50.115 },
     { "actas": 95.383, "keiko": 49.891, "roberto": 50.109 },
-    { "actas": 96.024, "keiko": 49.943, "roberto": 50.057 }
+    { "actas": 96.024, "keiko": 49.943, "roberto": 50.057 },
+    { "actas": 96.335, "keiko": 49.879, "roberto": 50.121 },
+    { "actas": 96.88,  "keiko": 49.913, "roberto": 50.087 }
   ]
 }
